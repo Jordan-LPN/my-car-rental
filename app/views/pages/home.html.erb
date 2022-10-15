@@ -2,8 +2,10 @@
   <div class="container">
     <h1>My Car Rental</h1>
     <p>Your preferred car rental on the island</p>
-    <a class="btn btn-flat" href="#">View all cars</a>
-    <%= link_to "View all cars", cars %>
+
+    <%= link_to "/cars" do %>
+        <button type="button" class="btn btn-flat">See Available Cars</button>
+      <% end %>
   </div>
 </div>
 
