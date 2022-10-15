@@ -4,6 +4,5 @@ class Car < ApplicationRecord
   validates :color, presence: true
   validates :year, presence: true, numericality: true
   validates :price, presence: true, numericality: true
-  # belongs_to :user
-
+  belongs_to :user
 end
