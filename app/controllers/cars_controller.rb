@@ -12,7 +12,7 @@ class CarsController < ApplicationController
 
 
   def new
-    @car = car.new
+    @car = Car.new
   end
 
 
@@ -21,7 +21,15 @@ class CarsController < ApplicationController
 
 
   def create
-    @car = car.new(car_params)
+    @car = Car.new(car_params)
+    @car.user_id=current_user.id
+    respond_to do |format|
+      if @car.save
+        redirect_to car_url(@car), notice: "car was successfully created."
+      else
+        render :new, status: :unprocessable_entity
+      end
+    end
   end
 
 
