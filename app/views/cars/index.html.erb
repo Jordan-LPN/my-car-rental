@@ -6,7 +6,7 @@
   <% @cars.each do |car| %>
      <%= car.brand %>
      <%= car.model %>
-
+     <%= image_tag(car.images_url) %>
     <p>
       <%= link_to "Show this car", car %>
     </p>
