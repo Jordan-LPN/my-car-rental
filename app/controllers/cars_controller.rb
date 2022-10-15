@@ -22,6 +22,7 @@ class CarsController < ApplicationController
 
   def create
     @car = Car.new(car_params)
+    @car.user_id=current_user.id
     respond_to do |format|
       if @car.save
         redirect_to car_url(@car), notice: "car was successfully created."
