@@ -8,6 +8,7 @@ class CarsController < ApplicationController
 
 
   def show
+    @reviews = @car.reviews
   end
 
 

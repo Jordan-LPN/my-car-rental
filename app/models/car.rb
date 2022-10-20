@@ -5,4 +5,5 @@ class Car < ApplicationRecord
   validates :year, presence: true, numericality: true
   validates :price, presence: true, numericality: true
   belongs_to :user
+  has_many :reviews
 end
