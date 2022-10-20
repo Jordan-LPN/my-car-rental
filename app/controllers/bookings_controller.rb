@@ -1,4 +1,4 @@
-class BookingController < ApplicationController
+class BookingsController < ApplicationController
 
   def index
     @bookings = Booking.all
@@ -6,6 +6,7 @@ class BookingController < ApplicationController
 
   def new
     @booking = Booking.new
+    @car = Car.find(params[:car_id])
   end
 
   def show
@@ -13,9 +14,9 @@ class BookingController < ApplicationController
   end
 
   def create
-    @car = Car.find(params[:id])
+    @car = Car.find(params[:car_id])
     @booking = Booking.new(booking_params)
-    booking.car = @car
+    @booking.car = @car
     @booking.user = current_user
     @booking.save
       redirect_to car_bookings_path(@car)
@@ -32,7 +33,7 @@ class BookingController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:user_id, :car_id, :date)
+    params.require(:booking).permit(:user_id, :car_id, :start_date, :end_date)
   end
 
 end
