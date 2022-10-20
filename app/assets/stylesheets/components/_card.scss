@@ -1,11 +1,23 @@
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 40px;
+  grid-gap: 20px;
   color: #f7f9f8;
   text-align: center;
   height: 300px;
 }
+
+.card-category {
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  display: flex;
+}
+
+.card-2 {
+
+}
+
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
