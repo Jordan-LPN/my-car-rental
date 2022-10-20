@@ -1,0 +1,57 @@
+
+<div class="container">
+  <h1>Please fill in your booking details:</h1>
+</div>
+
+<div class="container">
+  </div>
+    <ul>
+      <li> Brand: <%= @car.brand %></li>
+      <li> Model: <%= @car.model %></li>
+      <li> Color: <%= @car.color %></li>
+      <li> Year: <%= @car.year %></li>
+      <li> Price: <%= @car.price %>USD</li>
+    </ul>
+  </div>
+</div>
+
+  <div class="row">
+    <div class="col-6">
+      <img src="#" class="#">
+    </div>
+
+    <div class="col-6">
+      <form action="#" class="border">
+        <div class="mb-3">
+          <label form="" class="form-label">"Your Fullname"</label>
+          <input type="text" class="form-control" placeholder="Your Fullname">
+        </div>
+
+        <div class="mb-3">
+          <label form="" class="form-label">"Your Email"</label>
+          <input type="text" class="form-control" placeholder="Your Email">
+        </div>
+
+        <div class="mb-3">
+          <label form="" class="form-label">"Your Phone"</label>
+          <input type="text" class="form-control" placeholder="Your Phone">
+        </div>
+
+        <div class="mb-3">
+          <label form="" class="form-label">"Start Date"</label>
+          <input type="text" class="form-control" placeholder="Pickup Date">
+        </div>
+
+        <div class="mb-3">
+          <label form="" class="form-label">"End Date"</label>
+          <input type="text" class="form-control" placeholder="Dropoff Date">
+        </div>
+
+        <input type="submit" class="btn btn-primary>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<%= link_to 'View all my bookings',index_path(@booking), class: 'btn btn-gradient' %>
