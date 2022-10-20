@@ -23,5 +23,11 @@
           </div>
 
         <%= link_to 'Back',:back, class: 'btn btn-gradient' %>
+        <%= link_to 'Create Review', new_car_review_path(@car), class: 'btn btn-gradient'%>
+        <ul>
+        <% @reviews.each do |review| %>
+        <li> <%= review.feedback %></li>
+        <% end %>
+        </ul>
       </div>
     </div>
