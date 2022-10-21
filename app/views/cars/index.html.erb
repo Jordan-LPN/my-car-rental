@@ -1,19 +1,26 @@
 <p style="color: green"><%= notice %></p>
 
+<div class="container">
 <h1>Cars</h1>
-
 
   <div class="cards">
     <% @cars.each do |car| %>
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=452&q=80)">
+
         <%= car.brand %>
         <%= car.model %>
-        <%# <%= image_tag(car.images_url) %>
-        <%= link_to "Show this car", car %>
+        <i class="fa-solid fa-eye"></i>
+        <%# <%= image_tag(@car.images_url) %>
+        <%= link_to "Show this car", car %><i class="fa-solid fa-eye"></i>
       </div>
-
     <% end %>
   </div>
 
-<%= link_to "New car", new_car_path %>
+  <br>
 
+  <div>
+    <%= link_to "/cars/new" do %>
+    <button type="button" class="btn btn-flat">List A Car</button>
+    <% end %>
+  </div>
+</div>
