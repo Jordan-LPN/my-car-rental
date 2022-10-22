@@ -1,2 +1,19 @@
 // Import page-specific CSS files here.
-@import "home";
+.card-category {
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  height: 180px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  transition: transform 0.4s ease-out;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.card-category:hover {
+  transform: scale(1.02);
+}
+
+
+.a-link {
+  color: #22b4a8;
+}

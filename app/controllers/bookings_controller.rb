@@ -1,7 +1,9 @@
 class BookingsController < ApplicationController
 
   def index
-    @bookings = Booking.all
+    @bookings = Booking.all.select do |booking|
+      booking.user == current_user
+    end
   end
 
   def new

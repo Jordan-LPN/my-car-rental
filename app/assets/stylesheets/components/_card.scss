@@ -4,7 +4,18 @@
   grid-gap: 20px;
   color: #f7f9f8;
   text-align: center;
+  // height: 300px;
+
+}
+
+.cardscar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  color: #f7f9f8;
+  text-align: center;
   height: 300px;
+
 }
 
 .card-category {
@@ -12,8 +23,17 @@
   justify-content: center;
   border-radius: 10px;
   display: flex;
+  transition: transform 0.4s ease-out;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+  &.car-card {
+    flex-direction: column;
+  }
 }
 
+.card-category:hover {
+  transform: scale(1.02);
+}
 
 
 
@@ -50,6 +70,29 @@
   .cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
+
+
+.rev {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  color: black;
+  text-align: center;
+  padding: 15px 15px;
+  padding-bottom: 15px;
+  img {
+    width:200x;
+    height:500px;
+    object-fit: cover;
+    object-position: 50% 100%;
+
+  }
+}
+
+.float-containerrev {
+  border: 3px solid #fff;
+  padding: 20px;
 }
 
 .float-container {
