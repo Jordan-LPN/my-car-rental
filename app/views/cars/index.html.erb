@@ -6,28 +6,16 @@
 
   <div class="cards">
     <% @cars.each do |car| %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url( <%= car.images_url %>)">
-        <%= car.brand %>
-        <%= car.model %>
-        <%= link_to "Show this car", car %>
-        <i class="fa-solid fa-eye"></i>
+      <div class="card-category car-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url( <%= car.images_url %>)">
+        <div>
+          <%= car.brand %>
+          <%= car.model %>
+        </div>
+        <div>
+          <%= link_to "Show this car", car %>
+          <i class="fa-solid fa-eye"></i>
+        </div>
       </div>
     <% end %>
-  </div>
-</div>
-
-
-<%# <%= render "shared/footer" %>
-
-<div class="footer">
-  <div class="footer-links">
-    <a href="#"><i class="fab fa-github"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
-  </div>
-  <div class="footer-copyright">
-    Brought to you with <i class="fas fa-heart"></i> by My Car Rental
   </div>
 </div>
