@@ -2,7 +2,7 @@
     <h1>Your Bookings</h1>
       <ul style="list-style-type:none;">
         <% @bookings.each do |booking| %>
-          <li>Start Date: <%= booking.start_date %>, <br> end date: <%= booking.end_date %></li>
+          <li>Start Date: <%= booking.start_date %>, end date: <%= booking.end_date %></li>
         <% end %>
       </ul>
        <%= link_to 'Go back',:back, class: 'btn btn-flat' %>
