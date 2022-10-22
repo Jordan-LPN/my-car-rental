@@ -7,7 +7,10 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   resources :cars do
+    resources :reviews
     resources :bookings
   end
+
+  resources :bookings, only: [:index]
 
 end

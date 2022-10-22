@@ -1,0 +1,9 @@
+<div class="container">
+<h1>Cars Reviews</h1>
+
+<%= simple_form_for [@car, @review] do |f| %>
+  <%= f.input :feedback, html5: true %>
+  <%= f.submit 'Post Review' %>
+<% end %>
+
+</div>
