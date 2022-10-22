@@ -1,11 +1,23 @@
-<div class="container">
-<h1>Your Bookings</h1>
+<div class="center">
+    <h1>Your Bookings</h1>
+      <ul style="list-style-type:none;">
+        <% @bookings.each do |booking| %>
+          <li>Start Date: <%= booking.start_date %>, end date: <%= booking.end_date %></li>
+        <% end %>
+      </ul>
+       <%= link_to 'Go back',:back, class: 'btn btn-flat' %>
+</div>
 
-<br>
+  <div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
 
-    <ul>
-    <% @bookings.each do |booking| %>
-      <li>Start Date: <%= booking.start_date %>, end date: <%= booking.end_date %></li>
-    <% end %>
-    </ul>
+  <div class="footer-copyright">
+    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+  </div>
 </div>
