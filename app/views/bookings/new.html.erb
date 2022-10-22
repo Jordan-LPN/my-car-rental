@@ -1,15 +1,38 @@
-
-<div class="container">
+<div class="float-container">
+  <div class= "float-child">
   <h1>Please fill in your booking details:</h1>
 
 <br>
 
-<%= simple_form_for [@car, @booking] do |f| %>
-  <%= f.input :start_date, as: :date, html5: true %>
-  <%= f.input :end_date, as: :date, html5: true %>
-  <%= f.hidden_field :user_id %>
-  <%= f.hidden_field :car_id %>
-  <%= f.submit "Book now", class: "btn btn-primary" %>
-<% end %>
+    <%= simple_form_for [@car, @booking] do |f| %>
+      <%= f.input :start_date, as: :date, html5: true %>
+      <%= f.input :end_date, as: :date, html5: true %>
+      <%= f.hidden_field :user_id %>
+      <%= f.hidden_field :car_id %>
+      <%= f.submit "Book now", class: "btn btn-flat" %> <%= link_to 'Go back', car_path(@car), class: 'btn btn-flat' %>
+    <% end %>
 
+
+  </div>
+
+  <div class="card bg-transparent border-0">
+    <div class="card-car">
+      <h1>Car details:</h1>
+    </div>
+    <img src="https://www.supercars.net/blog/wp-content/uploads/2020/07/717662-scaled.jpg" class="card-img-bottom" alt="">
+    </div>
+  </div>
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+
+  <div class="footer-copyright">
+    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+  </div>
 </div>
